@@ -2,6 +2,7 @@ import NewPages from '@/components/news'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Contacts from '@/components/contact'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,6 +21,7 @@ export default function RootLayout({
       <body className={inter.className}>
         {children}
         <NewPages />
+        <Contacts />
       </body>
     </html>
   )
