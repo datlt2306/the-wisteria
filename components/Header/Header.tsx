@@ -5,8 +5,8 @@ import Slide from './Slide'
 const Header = () => {
   return (
     <>
-     <header className="  border-gray-200 dark:bg-gray-900 dark:border-gray-700 p">
-     <Slide/>
+     <header className=" border-gray-200 dark:bg-gray-900 dark:border-gray-700 p">
+    
       <div className="fixed  left-0  right-0 text-center  rounded-tl-2xl rounded-br-2xl bg-white mt-9 max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3">
         <a href="#" className="flex items-center">
           <img src="https://wisteria.vn/wp-content/uploads/2020/06/logo.webp" className="h-14" alt="Flowbite Logo" />         
@@ -21,6 +21,7 @@ const Header = () => {
       <Items/>
         </div>
       </div>
+      <Slide/>
     </header>
    
     </>
