@@ -25,7 +25,7 @@ const Contacts = () => {
                                 className='border border-solid border-[#f5bd16] border-t-0 outline-none' />
                             <p>Shophouse</p>
                         </div>
-                        <button className='border-none font-extrabold text-white bg-[#DCB560] py-1 w-full my-10 hover:text-red-600 hover:bg-[#DCB560]'>GỬI NGAY</button>
+                        <button className='border-none font-extrabold text-white bg-[#DCB560] py-1 w-full my-10 hover:text-red-600 hover:bg-[#ab873a]'>GỬI NGAY</button>
                     </form>
                     <p className='text-sm text-white font-semibold '>Phòng chăm sóc khách hàng</p>
                     <div className='text-white font-mono mt-10 text-sm '>
