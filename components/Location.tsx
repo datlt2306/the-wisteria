@@ -1,5 +1,6 @@
+"use client"
 import { IoCallOutline } from 'react-icons/io5';
-import {BiDownload} from 'react-icons/bi'
+import { BiDownload } from 'react-icons/bi'
 const Location = () => {
     return (
         <div className="bg-[#113354]">
@@ -18,8 +19,10 @@ const Location = () => {
                     </div>
 
                     <div className='flex'>
-                        <button className=" flex hover:border-none ... font-[var(--font-h1)] font-black p-[15px] text-[16px] border-2 border-sky-500 border-white mr-[13px] font-[var(--font-h1)] bg-[linear-gradient(90deg,#1e5896,#11395b)]">  <span className='mr-[10px] text-[14px]'><IoCallOutline/></span> GỌI HOTLINE </button>
-                        <button className="font-black  flex hover:bg-[linear-gradient(90deg,#1e5896,#11395b)] ... font-[var(--font-h1)]font-black p-[15px] border-2 border-sky-500 border-white bg-[#f00000]">   <span className='mr-[10px] text-[14px]'><BiDownload/> </span> TẢI BẢNG GIÁ</button>
+                        <button
+                            className=" flex hover:border-none  font-black p-[15px] text-[16px] border-2 border-solid border-sky-500 mr-[13px]  bg-[linear-gradient(90deg,#1e5896,#11395b)]">
+                            <span className='mr-[10px] text-[14px]'><IoCallOutline /></span> GỌI HOTLINE </button>
+                        <button className="font-black  flex hover:bg-[linear-gradient(90deg,#1e5896,#11395b)] ... font-[var(--font-h1)]font-black p-[15px] border-2 border-sky-500  bg-[#f00000]">   <span className='mr-[10px] text-[14px]'><BiDownload /> </span> TẢI BẢNG GIÁ</button>
                     </div>
                 </div>
                 <div>

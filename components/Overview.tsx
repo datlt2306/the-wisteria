@@ -1,4 +1,5 @@
-import React from 'react';
+"use client"
+
 import { BsFillTelephoneOutboundFill } from 'react-icons/bs';
 import { BsDownload } from 'react-icons/bs';
 
@@ -46,7 +47,7 @@ const Overview = () => {
                 <div className="">
                     <div>
                         <div>
-                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/S5GB0PMlxW8?si=u9oA49wOFyow10nD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/S5GB0PMlxW8?si=u9oA49wOFyow10nD" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe>
                         </div>
                     </div>
                 </div>

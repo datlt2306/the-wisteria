@@ -1,9 +1,9 @@
-import React from 'react'
+"use client"
 
 const Slide = () => {
   return (
     <>
-    <img className=' max-w-full' src="https://wisteria.vn/wp-content/uploads/2022/07/slide-1.webp" alt="" />
+      <img className=' max-w-full' src="https://wisteria.vn/wp-content/uploads/2022/07/slide-1.webp" alt="" />
     </>
   )
 }
