@@ -1,11 +1,12 @@
 "use client"
 
+import Script from 'next/script';
 import { HiSearch } from 'react-icons/hi'
-
+import 'flowbite';
 const Items = () => {
   return (
     <>
-      <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-[#11395b] dark:border-gray-700">
+      <ul className="flex z flex-col font-medium p-4 md:p-0  mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-[#11395b] dark:border-gray-700">
         <li>
           <a
             href="#"
@@ -31,7 +32,7 @@ const Items = () => {
             TIỆN ÍCH
           </a>
         </li>
-        <li>
+        <li >
           <button
             id="dropdownNavbarLink"
             data-dropdown-toggle="dropdownNavbar"
@@ -57,45 +58,39 @@ const Items = () => {
           {/* Dropdown menu */}
           <div
             id="dropdownNavbar"
-            className="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+            className="z-10  font-normal   bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
           >
             <ul
-              className="py-2 text-sm text-gray-700 dark:text-gray-400"
+              className="py-2 text-sm bg-[rgba(30,70,90,0.85)]  text-white dark:text-gray-400"
               aria-labelledby="dropdownLargeButton"
+              
             >
               <li>
                 <a
                   href="#"
-                  className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  className="block text-left font-[700]  px-4 py-2 hover:bg-gray-100 hover:text-yellow dark:hover:bg-gray-600 dark:hover:text-white"
                 >
-                  Dashboard
+                 Block A
                 </a>
               </li>
               <li>
                 <a
                   href="#"
-                  className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  className="block text-left font-[700] px-4 py-2 hover:bg-gray-100 hover:text-yellow dark:hover:bg-gray-600 dark:hover:text-white"
                 >
-                  Settings
+                   Block B
                 </a>
               </li>
               <li>
                 <a
                   href="#"
-                  className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  className="block text-left font-[700] px-4 py-2 hover:bg-gray-100 hover:text-yellow dark:hover:bg-gray-600 dark:hover:text-white"
                 >
-                  Earnings
+                  Shop House
                 </a>
               </li>
             </ul>
-            <div className="py-1">
-              <a
-                href="#"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
-              >
-                Sign out
-              </a>
-            </div>
+
           </div>
         </li>
         <li>
@@ -139,6 +134,7 @@ const Items = () => {
           </a>
         </li>
       </ul>
+      <Script src="../path/to/flowbite/dist/flowbite.min.js"></Script>
     </>
   );
 };
