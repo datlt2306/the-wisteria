@@ -1,8 +1,10 @@
+import Header from '@/components/Header/Header'
 import NewPages from '@/components/news'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Contacts from '@/components/contact'
+import Footer from '@/components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,9 +21,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        {children}
-        <NewPages />
-        <Contacts />
+        <Header />
+        <main className=''>
+          {children}
+          <NewPages />
+          <Contacts />
+        </main>
+        <Footer />
       </body>
     </html>
   )

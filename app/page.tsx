@@ -1,7 +1,13 @@
-
+"use client"
+import Overview from '@/components/Overview'
+import Location from '@/components/Location'
 
 export default function Home() {
   return (
-    <div></div>
+    <div>
+      <Overview />
+      <Location />
+    </div>
   )
 }
+
