@@ -9,12 +9,11 @@ const Banner = () => {
   const images = [
     "https://wisteria.vn/wp-content/uploads/2022/07/slide-1.webp",
     "https://wisteria.vn/wp-content/uploads/2023/08/slide-2.webp",
-  
   ];
   return (
     <div >
       {/* <Image className='object-fill bg-center' src="https://wisteria.vn/wp-content/uploads/2022/07/Banner-1.webp" fill objectFit="cover" alt="" /> */}
-      <div className=''>
+      <div className='relative z-1'>
         <Fade>
             <div className="each-slide">
             <div>
