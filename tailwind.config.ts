@@ -11,6 +11,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        tablet: "929px",
+      },
 
       colors: {
         yellow: "#e5c565 ",

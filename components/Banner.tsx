@@ -17,7 +17,7 @@ const Banner = () => {
         <Fade>
             <div className="each-slide">
             <div>
-                <img className='w-[100%]'  src={images[0]} alt={''} />
+                <Image fill objectFit='cover' src={images[0]} alt={''} />
             </div>
             </div>
             <div className="each-slide">
