@@ -1,23 +1,32 @@
 "use client"
 
+import Image from 'next/image';
+import { useState } from 'react';
 import { BsFillTelephoneOutboundFill } from 'react-icons/bs';
 import { BsDownload } from 'react-icons/bs';
+import { VscTriangleRight } from 'react-icons/vsc';
 
 
 const Overview = () => {
+    const [showVideo, setShowVideo] = useState(false);
+
+    const handleImageClick = () => {
+        setShowVideo(true);
+    };
     return (
-        <div className="over">
-            <div className="grid grid-cols-1 md:grid-cols-2 bg-slate-700 pt-16 pb-28 pl-2">
-                <div>
+        <div >
+            {/* <div className="grid grid-cols-1 md:grid-cols-2 pt-20 pb-24 pl-2 pr-2 @apply bg-[url(https://wisteria.vn/wp-content/plugins/us-core/assets/images/placeholder.svg)] bg-no-repeat bg-cover "> */}
+            <div className="grid grid-cols-1 md:grid-cols-2 pt-20 pb-24 pl-2 pr-2  bg-[#25334c] ">
+                <div className='mb-11 pr-10'>
                     <div>
                         <div>
-                            <b style={{ fontSize: "40pt", color: '#dac37f', }}>THE WISTERIA</b><br />
-                            <b className='text-white mt-3 ' style={{ fontSize: "18pt" }}>MỘT SIÊU PHẨM SẮP RA MẮT</b>
+                            <b className='@apply text-[40pt] text-[#dac37f] font' style={{ fontFamily: "M96" }}>THE WISTERIA</b><br />
+                            <b className='text-white mt-3 @apply text-[18pt]'>MỘT SIÊU PHẨM SẮP RA MẮT</b>
                         </div>
                         <br />
-                        <div>
-                            <label htmlFor="" className='td2'>Dự án chung cư cao cấp The Wisteria </label>
-                            <label htmlFor="" className='td1'>
+                        <div >
+                            <label htmlFor="" className=' text-yellow' >Dự án chung cư cao cấp The Wisteria </label>
+                            <label htmlFor="" className=' text-white'>
                                 được triển khai xây dựng trong quần thể dự án Hinode Royal Park
                                 bao gồm 840 căn hộ tại 3 block (A, B, C). Sản phẩm chủ đạo:
                                 Căn hộ chung cư, căn hộ Duplex, Penhouse, Shophouse.
@@ -25,17 +34,17 @@ const Overview = () => {
                         </div>
                         <br />
                         <div>
-                            <label htmlFor="" className='td1'>
+                            <label htmlFor="" className=' text-white'>
                                 Hãy bắt đầu những trải nghiệm mới mẻ & cơ hội đầu tư vô cùng
                                 hấp dẫn tại
                             </label>
-                            <label htmlFor="" className='td2'> The Wisteria.</label>
+                            <label htmlFor="" className=' text-yellow'> The Wisteria.</label>
                         </div>
                         <br />
                         <div>
                             <button className='flex gap-2 items-center bg-[#11395b] hover:bg-[#1e5896] px-3 py-2 text-white border border-solid border-white float-left mr-3'>
                                 <BsFillTelephoneOutboundFill />
-                                <span>Gọi hotline</span>
+                                <a href="tel:...">Gọi hotline</a>
                             </button>
                             <button className='flex gap-2 items-center bg-[#f00000] hover:bg-[#11395b] px-3 py-2 text-white border border-solid border-white'>
                                 <BsDownload />
@@ -46,96 +55,102 @@ const Overview = () => {
                 </div>
                 <div className="">
                     <div>
-                        <div>
-                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/S5GB0PMlxW8?si=u9oA49wOFyow10nD" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe>
-                        </div>
+                        <button>
+                            <div className="relative">
+                                {!showVideo ? (
+                                    <>
+                                        <img
+                                            src="https://wisteria.vn/wp-content/uploads/2023/08/phoi-canh-2.webp"
+                                            alt="Ảnh đại diện"
+                                            className="object-cover w-full @apply h-[450px]"
+                                            onClick={handleImageClick}
+                                        />
+                                        <div className='@apply absolute mt-[-1.5em] ml-[-1.5em] mr-0 mb-0 left-[65%] top-[65%] leading-[3] w-[2.8em] pl-[0.2em] text-center box-content pointer-events-none rounded-[50%] transition-transform duration-[0.2s] text-[70px] group-hover:scale-125'>
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 192 512"  ><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z" /></svg>
+                                        </div>
+                                    </>
+
+                                ) : (
+
+
+
+                                    <div className='w-full'>
+                                        <iframe width="630" height="450" src="https://www.youtube.com/embed/S5GB0PMlxW8?si=l2jdi3rLsW_X3asV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    </div>
+                                )}
+                            </div>
+                        </button>
                     </div>
                 </div>
             </div>
-            <div
-                className="grid grid-cols-1 md:grid-cols-2"
-                style={{ backgroundColor: '#223452', paddingBottom: "50px" }}
-            >
+            <div className="grid grid-cols-1 md:grid-cols-2 @apply pb-[50px] @apply bg-[#223452] ">
                 <div className="">
                     <img
                         src="https://wisteria.vn/wp-content/uploads/2023/08/phoi-canh-2.webp"
                         alt=""
-                        style={{ border: '4px solid #ffffff', marginBottom: '20px' }}
+                        className='@apply border-[4px] border-solid border-[#ffffff]'
                     />
                 </div>
                 <div className="p-6">
-                    <div style={{ textAlign: "center" }} >
-                        <b
-                            style={{
-                                fontSize: '30pt',
-                                color: '#dac37f',
-                                fontFamily: 'M96',
-                            }}
-                        >
+                    <div className='@apply text-center' >
+                        <b className='@apply text-[30pt] text-[#dac37f]' style={{ fontFamily: 'M96' }}>
                             TỔNG QUAN DỰ ÁN
                         </b>
                         <br />
-                        <b
-                            style={{
-                                fontSize: '15pt',
-                                color: '#ffffff',
-                                paddingBottom: '50px',
-                                margin: "30px 0"
-                            }}
-                        >
+                        <b className='@apply text-[15pt] text-[#ffffff]  @apply mx-[0] my-[30px] pb-[50px]'>
                             THE WISTERIA
                         </b>
                     </div>
-                    <div className="W_html">
-                        <table className="table ta_ov" style={{ width: '100%' }}>
-                            <tbody>
-                                <tr>
-                                    <td className='td1'>Tên dự án	</td>
-                                    <td className='td2'>Chung cư THE WISTERIA</td>
+                    <div className="W_html mt-6  @apply w-['100%'] ">
+                        <table className="@apply w-full border-collapse" >
+                            <tbody className='leading-7 pl-1 ' >
+                                <tr className=''>
+                                    <td className='text-white @apply border border-solid border-[white] pl-1' >Tên dự án	</td>
+                                    <td className='text-yellow @apply border border-solid border-[white] pl-1'>Chung cư THE WISTERIA</td>
                                 </tr>
                                 <tr>
-                                    <td className='td2'>Vị trí	</td>
-                                    <td className='td1'>Nội khu dự án Hinode Royal Park</td>
+                                    <td className='text-yellow @apply border border-solid border-[white] pl-1'>Vị trí	</td>
+                                    <td className='text-white @apply border border-solid border-[white] pl-1'>Nội khu dự án Hinode Royal Park</td>
                                 </tr>
                                 <tr>
-                                    <td className='td2'>Chủ đầu tư:	</td>
-                                    <td className='td1'>Tổng Công ty Cổ phần Thương mại Xây dựng (Vietracimex)</td>
+                                    <td className='text-yellow @apply border border-solid border-[white] pl-1'>Chủ đầu tư:	</td>
+                                    <td className='text-white @apply border border-solid border-[white] pl-1'>Tổng Công ty Cổ phần Thương mại Xây dựng (Vietracimex)</td>
                                 </tr>
                                 <tr>
-                                    <td className='td2'>Quy mô dự án</td>
-                                    <td className='td1'>1,627 ha</td>
+                                    <td className='text-yellow @apply border border-solid border-[white] pl-1'>Quy mô dự án</td>
+                                    <td className='text-white @apply border border-solid border-[white] pl-1'>1,627 ha</td>
                                 </tr>
                                 <tr>
-                                    <td className='td2'>Mật Độ Xậy Dựng</td>
-                                    <td className='td1'>53%</td>
+                                    <td className='text-yellow @apply border border-solid border-[white] pl-1'>Mật Độ Xậy Dựng</td>
+                                    <td className='text-white @apply border border-solid border-[white] pl-1'>53%</td>
                                 </tr>
                                 <tr>
-                                    <td className='td2'>Tổng Số Căn Hộ</td>
-                                    <td className='td1'>840 căn</td>
+                                    <td className='text-yellow @apply border border-solid border-[white] pl-1'>Tổng Số Căn Hộ</td>
+                                    <td className='text-white @apply border border-solid border-[white] pl-1'>840 căn</td>
                                 </tr>
                                 <tr>
-                                    <td className='td2'>Chiều cao tầng</td>
-                                    <td className='td1'>25 tầng (3 block)</td>
+                                    <td className='text-yellow @apply border border-solid border-[white] pl-1'>Chiều cao tầng</td>
+                                    <td className='text-white @apply border border-solid border-[white] pl-1'>25 tầng (3 block)</td>
                                 </tr>
                                 <tr>
-                                    <td className='td2'>Số tầng hầm</td>
-                                    <td className='td1'>2 tầng</td>
+                                    <td className='text-yellow @apply border border-solid border-[white] pl-1'>Số tầng hầm</td>
+                                    <td className='text-white @apply border border-solid border-[white] pl-1'>2 tầng</td>
                                 </tr>
                                 <tr>
-                                    <td className='td2'>Số tầng thương mại</td>
-                                    <td className='td1'>5 tầng</td>
+                                    <td className='text-yellow @apply border border-solid border-[white] pl-1'>Số tầng thương mại</td>
+                                    <td className='text-white @apply border border-solid border-[white] pl-1'>5 tầng</td>
                                 </tr>
                                 <tr>
-                                    <td className='td2'>Quy mô dân số</td>
-                                    <td className='td1'>2.200 người</td>
+                                    <td className='text-yellow @apply border border-solid border-[white] pl-1'>Quy mô dân số</td>
+                                    <td className='text-white @apply border border-solid border-[white] pl-1'>2.200 người</td>
                                 </tr>
                                 <tr>
-                                    <td className='td2'>Thời gian mở bán</td>
-                                    <td className='td1'>Quý III/2023</td>
+                                    <td className='text-yellow @apply border border-solid border-[white] pl-1'>Thời gian mở bán</td>
+                                    <td className='text-white @apply border border-solid border-[white] pl-1'>Quý III/2023</td>
                                 </tr>
                                 <tr>
-                                    <td className='td2'>Dự kiến bàn giao</td>
-                                    <td className='td1'>Quý IV/2025</td>
+                                    <td className='text-yellow @apply border border-solid border-[white] pl-1'>Dự kiến bàn giao</td>
+                                    <td className='text-white @apply border border-solid border-[white] pl-1'>Quý IV/2025</td>
                                 </tr>
                             </tbody>
                         </table>
