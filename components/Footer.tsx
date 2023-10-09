@@ -6,7 +6,7 @@ import { CiFacebook } from "react-icons/ci";
 const Footer = () => {
   return (
     <div>
-      <div className="w-auto h-auto bg-[#11395B] ">
+      <div className="w-auto h-auto bg-[#11395B]">
         <footer className=" dark:bg-gray-900 py-10 ">
           <div className=" w-auto grid sm:grid-cols-1 md:grid-cols-[20%,35%,auto] lg:grid-cols-[20%,35%,35%]  gap-[5%]  lg:px-10">
             <div className="px-1">
@@ -32,7 +32,7 @@ const Footer = () => {
                 </div>
 
                 <div className="flex text-[#ffffff] mb-2.5 ">
-                  <IoLocationOutline size={25}/>
+                  <IoLocationOutline/>
                   <span className="ml-3 font-sans">
                     Km14-16,QL32,Xã Kim Chung – Di Trạch,Hoài Đức, Hà Nội
                   </span>
