@@ -14,14 +14,14 @@ const NewPages = () => {
                             <img src="./img/SG_PV_07_Shophouse.jpg" className='w-auto' alt="" />
                         </Link>
                     </div>
-                    <a href="">
+                    <Link href="">
                         <h5 className='mt-3 font-bold'>
 
                             Tiến độ dự án chung cư The Wisteria tháng 9/2023
                         </h5>
                         <div className='text-sm'>
                             <div className='flex gap-5 items-center my-2'>
-                                <Link href="#" className='text-red-500 font-extrabold text-sm '>Tin tức dự án</Link>
+                                <p className='text-red-500 font-extrabold text-sm '>Tin tức dự án</p>
                                 <div className='flex items-center gap-2 text-gray-400'>
                                     <VscCalendar />
                                     <p className='font-sans'>29/08/2023</p>
@@ -29,7 +29,7 @@ const NewPages = () => {
 
                             </div>
                         </div>
-                    </a>
+                    </Link>
                     <p className='text-sm font-sans'>Công ty Cổ phần Thương mại và Xây dựng (WTO) tên cũ là Vietracimex là một…</p>
                 </div>
                 <div>
@@ -38,14 +38,14 @@ const NewPages = () => {
                             <img src="./img/SG_PV_07_Shophouse.jpg" className='w-auto' alt="" />
                         </Link>
                     </div>
-                    <a href="">
+                    <Link href="">
                         <h5 className='mt-3 font-bold'>
 
                             Tiến độ dự án chung cư The Wisteria tháng 9/2023
                         </h5>
                         <div className='text-sm'>
                             <div className='flex gap-5 items-center my-2'>
-                                <Link href="#" className='text-red-500 font-extrabold text-sm '>Tin tức dự án</Link>
+                                <p className='text-red-500 font-extrabold text-sm '>Tin tức dự án</p>
                                 <div className='flex items-center gap-2 text-gray-400'>
                                     <VscCalendar />
                                     <p className='font-sans'>29/08/2023</p>
@@ -53,7 +53,7 @@ const NewPages = () => {
 
                             </div>
                         </div>
-                    </a>
+                    </Link>
                     <p className='text-sm font-sans'>Công ty Cổ phần Thương mại và Xây dựng (WTO) tên cũ là Vietracimex là một…</p>
                 </div>
                 <div>
@@ -69,7 +69,7 @@ const NewPages = () => {
                         </h5>
                         <section className='text-sm'>
                             <div className='flex gap-5 items-center my-2'>
-                                <Link href="#" className='text-red-500 font-extrabold text-sm '>Tin tức dự án</Link>
+                                <p className='text-red-500 font-extrabold text-sm '>Tin tức dự án</p>
                                 <div className='flex items-center gap-2 text-gray-400'>
                                     <VscCalendar />
                                     <p className='font-sans'>29/08/2023</p>
