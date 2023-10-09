@@ -1,25 +1,31 @@
-import { IoCallOutline } from 'react-icons/io5';
-import {BiDownload} from 'react-icons/bi'
+import { BsFillTelephoneOutboundFill } from 'react-icons/bs';
+import { BsDownload } from 'react-icons/bs';
 const Location = () => {
     return (
         <div className="bg-[#113354]">
 
-            <div className="grid gap-4 grid-cols-1 md:grid-cols-2  ">
-                <div className=" pt-[40px] pl-[120px] max-w-[80%]" >
-                    <div className="font-[var(--font-h2)] mb-[17px]" >
-                        <h1 className="text-[#fade8c] text-[40pt] font-[M96] font-semibold	mb-[17px]	">VỊ TRÍ VÀNG</h1>
-                        <h3 className=" text-[#fff]  font-semibold	text-[20px] mb-[10px]">TÂM ĐIỂM THỊNH VƯỢNG</h3>
-                        <span className="text-[#fade8c] font-bold ">Chung cư The Wisteria </span> <span className="text-[14px]"> toạ lạc tại đại lộ Bình Minh, khu thiết kế phong cách Nhật (trong quần thể dự án Hinode Royal Park), mặt quốc lộ 32 thuộc địa bàn 2 xã Kim Chung & Di Trạch, Hoài Đức, Hà Nội. Cách trung tâm Hà Nội chỉ 10 phút lái xe, …</span>
+            <div className="grid gap-4 grid-cols-1 lg:grid-cols-2 ">
+                <div className=" pt-[5%] lg:mx-auto mx-[10px] lg:max-w-[80%] max-w-full" >
+                    <div className="font-[var(--font-h2)] mb-[17px] " >
+                        <h1 className="text-[#fade8c] lg:text-[40pt] font-[M96] font-semibold	mb-[17px] text-[35px]	">VỊ TRÍ VÀNG</h1>
+                        <h3 className=" text-[#fff]  font-semibold	lg:text-[20px] text-[16px] mb-[10px]">TÂM ĐIỂM THỊNH VƯỢNG</h3>
+                        <span className="text-[#fade8c] font-bold ">Chung cư The Wisteria </span> <span className="text-[14px] text-[#FFFFFF]"> toạ lạc tại đại lộ Bình Minh, khu thiết kế phong cách Nhật (trong quần thể dự án Hinode Royal Park), mặt quốc lộ 32 thuộc địa bàn 2 xã Kim Chung & Di Trạch, Hoài Đức, Hà Nội. Cách trung tâm Hà Nội chỉ 10 phút lái xe, …</span>
 
                         <p className="mb-[17px] mt-[17px] text-[14px] text-[#fade8c]">Theo quy hoạch chung của thành phố, cụm khu vực phía Tây sẽ trở thành trung tâm Hành chính – Kinh tế – Văn hoá – Du lịch – Thương mại mới.</p>
 
-                        <span className=" text-[14px] " >– Trong thời gian tới, việc hoàn thành các tuyến đường dự kiến như quốc lộ 32, Tây Thăng Long, đường vành đai 3.5, tuyến đường sắt trên cao Nhổn – ga Hà Nội sẽ góp phần thay đổi diện mạo giao thông của khu vực, hứa hẹn trở thành trung tâm đô thị sôi động mới của Thủ đô…
+                        <span className=" text-[14px] text-[#FFFFFF] " >– Trong thời gian tới, việc hoàn thành các tuyến đường dự kiến như quốc lộ 32, Tây Thăng Long, đường vành đai 3.5, tuyến đường sắt trên cao Nhổn – ga Hà Nội sẽ góp phần thay đổi diện mạo giao thông của khu vực, hứa hẹn trở thành trung tâm đô thị sôi động mới của Thủ đô…
                         </span>
                     </div>
 
-                    <div className='flex'>
-                        <button className=" flex hover:border-none ... font-[var(--font-h1)] font-black p-[15px] text-[16px] border-2 border-sky-500 border-white mr-[13px] font-[var(--font-h1)] bg-[linear-gradient(90deg,#1e5896,#11395b)]">  <span className='mr-[10px] text-[14px]'><IoCallOutline/></span> GỌI HOTLINE </button>
-                        <button className="font-black  flex hover:bg-[linear-gradient(90deg,#1e5896,#11395b)] ... font-[var(--font-h1)]font-black p-[15px] border-2 border-sky-500 border-white bg-[#f00000]">   <span className='mr-[10px] text-[14px]'><BiDownload/> </span> TẢI BẢNG GIÁ</button>
+                    <div>
+                        <button className='font-bold flex gap-2 items-center bg-[#11395b] text-[16x] hover:bg-[#1e5896] px-3 py-2 text-white border border-solid border-white float-left mr-3'>
+                            <BsFillTelephoneOutboundFill />
+                            <span>Gọi hotline</span>
+                        </button>
+                        <button className='font-bold flex gap-2 items-center bg-[#f00000] text-[16px] hover:bg-[#11395b] px-3 py-2 text-white border border-solid border-white'>
+                            <BsDownload />
+                            <span>TẢI BẢNG GIÁ</span>
+                        </button>
                     </div>
                 </div>
                 <div>
@@ -29,11 +35,11 @@ const Location = () => {
 
             <div className="w-full text-center">
                 <div className="mt-[20px]">
-                    <h1 className="text-[#fade8c] text-[30pt] font-[M96] font-semibold	mb-[17px] text-center	">TIỆN ÍCH</h1>
+                    <h1 className="text-[#fade8c] lg:text-[40pt] text-[35px] font-[M96] font-semibold	mb-[17px] text-center	">TIỆN ÍCH</h1>
                     <h3 className="text-[#fff]  font-semibold	text-[15px] mb-[10px] text-center">ĐỒNG BỘ – ĐẲNG CẤP – KHÁC BIỆT</h3>
                 </div>
                 <div className=" m-[20px] p-[20px] bg-[linear-gradient(270deg,rgba(22,107,156,0) 10.04%,#166B9C 56.52%,rgba(22,107,156,0) 96.69%)] ">
-                    <p className="max-w-[713px] font-[var(--font-h2)] m-auto">Với chuỗi tiện ích đẳng cấp trong quần thể dự án Hinode Royal Park, <span className="text-[#fade8c] font-bold">The Wisteria</span> mang đến cho khách hàng những trải nghiệm tuyệt vời nhất…</p>
+                    <p className="max-w-[713px] font-[var(--font-h2)] m-auto text-white">Với chuỗi tiện ích đẳng cấp trong quần thể dự án Hinode Royal Park, <span className="text-[#fade8c] font-bold">The Wisteria</span> mang đến cho khách hàng những trải nghiệm tuyệt vời nhất…</p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
