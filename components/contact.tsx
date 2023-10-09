@@ -8,17 +8,30 @@ const Contacts = () => {
                 <div className='py-7 p-2 xl:pl-10 '>
                     <h2 className='text-4xl text-[#f5bd16] font-extralight py-3'>MIỄN PHÍ TƯ VẤN</h2>
                     <p className='font-extrabold text-white'>Cập nhật bảng giá & chính sách bán hàng mới nhất</p>
-                    <form action="">
-                        <input type="text" placeholder='Họ và tên(*)' className='border text-sm px-2 py-2 outline-none border-solid border-[#f5bd16] w-full border-t-0 my-3 border-r-0 text-white bg-[#286678]' />
-                        <input type="text" placeholder='Địa chỉ email' className='border text-sm px-2 py-2 outline-none border-solid border-[#f5bd16] w-full border-t-0 my-3 border-r-0 text-white bg-[#286678]' />
-                        <input type="text" placeholder='Số điện thoại (*)' className='border text-sm px-2 py-2 outline-none border-solid border-[#f5bd16] w-full border-t-0 my-3 border-r-0 text-white bg-[#286678]' />
+                    <form action="" className="form-contact">
+                        <input
+                            type="text"
+                            placeholder="Họ và tên(*)"
+                            className="input-form-contacts   text-sm px-2 py-2 focus:outline-none outline-none border-solid border-[#f5bd16] w-full border-t-0 my-3 border-r-0 text-white bg-[#286678]"
+                        />
+
+                        <input
+                            type="text"
+                            placeholder='Địa chỉ email'
+                            className='input-form-contacts border text-sm  px-2 py-2 outline-none border-solid border-[#f5bd16] w-full border-t-0 my-3 border-r-0 text-white bg-[#286678]'
+                        />
+                        <input
+                            type="text"
+                            placeholder='Số điện thoại (*)'
+                            className=' input-form-contacts border text-sm px-2 py-2 outline-none border-solid border-[#f5bd16] w-full border-t-0 my-3 border-r-0 text-white bg-[#286678]'
+                        />
                         <p className='font-sans text-white text-base mb-2 mt-5'>Quý khách đang quan tâm tới sản phẩm:</p>
                         <div className='flex gap-2  text-white text-sm items-center font-sans'>
                             <input type="radio" name="than" id="" className='border border-solid border-[#f5bd16] p-1' />
                             <span>Căn hộ</span>
                         </div>
-                        <div className='flex gap-2  text-white text-sm items-center font-sans'>
-                            <input type="radio" name="than" id="" className='border border-solid border-[#f5bd16]' />
+                        <div className='flex gap-2  text-white outline-none  text-sm items-center font-sans'>
+                            <input type="radio" name="than" id="" className='border outline-none border-solid border-[#f5bd16]' />
                             <span>Penhouse</span>
                         </div>
                         <div className='flex gap-2  text-white text-sm items-center font-sans'>
