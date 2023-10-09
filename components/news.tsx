@@ -4,10 +4,10 @@ import Link from 'next/link'
 import { VscCalendar } from "react-icons/vsc"
 const NewPages = () => {
     return (
-        <section className='xl:px-10'>
+        <section className='xl:px-10 max-w-screen-2xl mx-auto'>
             <h2 className='text-center text-5xl my-5'>TIN TỨC</h2>
             <p className='text-center font-semibold mb-10'>CẬP NHẬT TIẾN ĐỘ, THÔNG TIN DỰ ÁN</p>
-            <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-5'>
+            <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mx-auto'>
                 <div>
                     <div className='border p-1 border-solid'>
                         <Link href="">

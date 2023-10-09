@@ -4,8 +4,8 @@
 const Contacts = () => {
     return (
         <>
-            <section className='bg-[#286678]  mt-12 grid grid-cols-1 md:grid-cols-2   gap-6  mx-auto' >
-                <div className='py-7 p-2 xl:pl-10 '>
+            <section className='bg-[#286678]  mt-12 grid grid-cols-1 md:grid-cols-2    gap-6  mx-auto' >
+                <div className='py-7 p-2 xl:pl-10 max-w-screen-2xl mx-auto '>
                     <h2 className='text-4xl text-[#f5bd16] font-extralight py-3'>MIỄN PHÍ TƯ VẤN</h2>
                     <p className='font-extrabold text-white'>Cập nhật bảng giá & chính sách bán hàng mới nhất</p>
                     <form action="" className="form-contact">
