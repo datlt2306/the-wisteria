@@ -75,7 +75,15 @@ const Overview = () => {
 
 
                                     <div className='w-full'>
-                                        <iframe width="630" height="450" src="https://www.youtube.com/embed/S5GB0PMlxW8?si=l2jdi3rLsW_X3asV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                        <iframe
+                                            width={630}
+                                            height={450}
+                                            src="https://www.youtube.com/embed/S5GB0PMlxW8?si=l2jdi3rLsW_X3asV"
+                                            title="YouTube video player"
+                                            frameBorder={0}
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        // allowFullScreen=""
+                                        />
                                     </div>
                                 )}
                             </div>
