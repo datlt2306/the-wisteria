@@ -25,7 +25,7 @@ const Footer = () => {
               <div className="grid grid-rows  pt-4  justify-start">
                 <div className="flex text-[#ffffff] mb-2.5  items-center">
                   <BsTelephone />
-                  <span className="ml-3 font-sans">0898.186.999</span>
+                  <span className="ml-3 font-sans">034.469.9191</span>
                 </div>
                 <div className="flex text-[#ffffff] mb-2.5 items-center">
                   <HiOutlineMail />

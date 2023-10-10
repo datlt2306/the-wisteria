@@ -44,7 +44,7 @@ const Contacts = () => {
                     <p className='text-sm text-white font-semibold '>Phòng chăm sóc khách hàng</p>
                     <div className='text-white font-mono mt-10 text-sm '>
                         <span>VPGD: Km14-16, QL32, xã Kim Chung – Di Trạch, Hoài Đức, Hà Nội</span> <br />
-                        <span>Hotline 0898.186.999</span> <br />
+                        <span>Hotline 034.469.9191</span> <br />
                         <span>Email: info@wisteria.vn</span> <br />
                     </div>
                 </div>

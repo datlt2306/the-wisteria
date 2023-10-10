@@ -28,7 +28,6 @@ const Overview = () => {
 
     return (
         <div >
-            {/* <div className="grid grid-cols-1 md:grid-cols-2 pt-20 pb-24 pl-2 pr-2 @apply bg-[url(https://wisteria.vn/wp-content/plugins/us-core/assets/images/placeholder.svg)] bg-no-repeat bg-cover "> */}
             <div className="grid grid-cols-1 md:grid-cols-2 pt-20 pb-24 pl-2 pr-2  bg-[#25334c] ">
                 <div className='mb-11 pr-10'>
                     <div>
@@ -58,7 +57,7 @@ const Overview = () => {
                             <div>
                                 <button className='font-bold flex gap-2 items-center bg-[#11395b] text-[16x] hover:bg-[#1e5896] px-3 py-2 text-white border border-solid border-white float-left mr-3'>
                                     <BsFillTelephoneOutboundFill />
-                                    <span>Gọi hotline</span>
+                                    <a href="tel:034.469.9191"><span>Gọi hotline</span></a>
                                 </button>
                             </div>
 
@@ -83,13 +82,10 @@ const Overview = () => {
                             <div className="relative">
                                 {!showVideo ? (
                                     <>
-                                        <Image
+                                        <img
                                             src="https://wisteria.vn/wp-content/uploads/2023/08/phoi-canh-2.webp"
                                             alt="Ảnh đại diện"
                                             className="object-cover w-full @apply h-[450px]"
-                                            layout='responsive'
-                                            width={100}
-                                            height={450}
                                             onClick={handleImageClick}
                                         />
                                         <div className="@apply absolute mt-[-1.5em] ml-[-1.5em] mr-0 mb-0 left-[65%] top-[65%] leading-[3] w-[2.8em] pl-[0.2em] text-center box-content pointer-events-none rounded-[50%] transition-transform duration-300 text-[70px] hover:scale-200">
@@ -106,13 +102,12 @@ const Overview = () => {
                                 ) : (
                                     <div className='w-full'>
                                         <iframe
-                                            width="640px"
+                                            width="100%"
                                             height="450px"
                                             src="https://www.youtube.com/embed/S5GB0PMlxW8?si=l2jdi3rLsW_X3asV"
                                             title="YouTube video player"
                                             frameBorder={0}
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        // allowFullScreen=""
                                         />
                                     </div>
                                 )}
