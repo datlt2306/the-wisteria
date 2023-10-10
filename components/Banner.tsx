@@ -12,12 +12,11 @@ const Banner = () => {
   ];
   return (
     <div>
-      {/* <Image className='object-fill bg-center' src="https://wisteria.vn/wp-content/uploads/2022/07/Banner-1.webp" fill objectFit="cover" alt="" /> */}
-      <div className="">
+      <div className='relative z-0'>
         <Fade>
           <div className="each-slide">
             <div>
-              <Image fill objectFit="cover" src={images[0]} alt={""} />
+              <Image fill objectFit='cover' src={images[0]} alt={''} />
             </div>
           </div>
           <div className="each-slide">
@@ -28,7 +27,6 @@ const Banner = () => {
         </Fade>
       </div>
     </div>
-  );
-};
-
+  )
+}
 export default Banner;
