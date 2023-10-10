@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { BsFillTelephoneOutboundFill } from 'react-icons/bs';
 import { BsDownload } from 'react-icons/bs';
 import { VscTriangleRight } from 'react-icons/vsc';
+import Modal from './ModelOverview';
 
 
 const Overview = () => {
@@ -13,6 +14,18 @@ const Overview = () => {
     const handleImageClick = () => {
         setShowVideo(true);
     };
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const handleDownloadButtonClick = () => {
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+    };
+
+
     return (
         <div >
             {/* <div className="grid grid-cols-1 md:grid-cols-2 pt-20 pb-24 pl-2 pr-2 @apply bg-[url(https://wisteria.vn/wp-content/plugins/us-core/assets/images/placeholder.svg)] bg-no-repeat bg-cover "> */}
@@ -42,14 +55,25 @@ const Overview = () => {
                         </div>
                         <br />
                         <div>
-                            <button className='flex gap-2 items-center bg-[#11395b] hover:bg-[#1e5896] px-3 py-2 text-white border border-solid border-white float-left mr-3'>
-                                <BsFillTelephoneOutboundFill />
-                                <a href="tel:...">Gọi hotline</a>
-                            </button>
-                            <button className='flex gap-2 items-center bg-[#f00000] hover:bg-[#11395b] px-3 py-2 text-white border border-solid border-white'>
-                                <BsDownload />
-                                <span>TẢI BẢNG GIÁ</span>
-                            </button>
+                            <div>
+                                <button className='font-bold flex gap-2 items-center bg-[#11395b] text-[16x] hover:bg-[#1e5896] px-3 py-2 text-white border border-solid border-white float-left mr-3'>
+                                    <BsFillTelephoneOutboundFill />
+                                    <span>Gọi hotline</span>
+                                </button>
+                            </div>
+
+                            <div>
+                                <button onClick={handleDownloadButtonClick} className='font-bold flex gap-2 items-center bg-[#f00000] text-[16px] hover:bg-[#11395b] px-3 py-2 text-white border border-solid border-white'>
+                                    <BsDownload />
+                                    <span>TẢI BẢNG GIÁ</span>
+                                </button>
+
+                                <Modal
+                                    isOpen={isModalOpen}
+                                    onClose={closeModal}
+                                    message="Đây là thông báo"
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -59,25 +83,31 @@ const Overview = () => {
                             <div className="relative">
                                 {!showVideo ? (
                                     <>
-                                        <img
+                                        <Image
                                             src="https://wisteria.vn/wp-content/uploads/2023/08/phoi-canh-2.webp"
                                             alt="Ảnh đại diện"
                                             className="object-cover w-full @apply h-[450px]"
+                                            layout='responsive'
+                                            width={100}
+                                            height={450}
                                             onClick={handleImageClick}
                                         />
-                                        <div className='@apply absolute mt-[-1.5em] ml-[-1.5em] mr-0 mb-0 left-[65%] top-[65%] leading-[3] w-[2.8em] pl-[0.2em] text-center box-content pointer-events-none rounded-[50%] transition-transform duration-[0.2s] text-[70px] group-hover:scale-125'>
-                                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 192 512"  ><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z" /></svg>
+                                        <div className="@apply absolute mt-[-1.5em] ml-[-1.5em] mr-0 mb-0 left-[65%] top-[65%] leading-[3] w-[2.8em] pl-[0.2em] text-center box-content pointer-events-none rounded-[50%] transition-transform duration-300 text-[70px] hover:scale-200">
+                                            <div className="group">
+                                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 192 512">
+                                                    <style dangerouslySetInnerHTML={{ __html: "svg{fill:#ffffff}" }} />
+                                                    <path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z" />
+                                                </svg>
+                                            </div>
                                         </div>
+
                                     </>
 
                                 ) : (
-
-
-
                                     <div className='w-full'>
                                         <iframe
-                                            width={630}
-                                            height={450}
+                                            width="640px"
+                                            height="450px"
                                             src="https://www.youtube.com/embed/S5GB0PMlxW8?si=l2jdi3rLsW_X3asV"
                                             title="YouTube video player"
                                             frameBorder={0}
@@ -93,9 +123,12 @@ const Overview = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 @apply pb-[50px] @apply bg-[#223452] ">
                 <div className="">
-                    <img
+                    <Image
                         src="https://wisteria.vn/wp-content/uploads/2023/08/phoi-canh-2.webp"
                         alt=""
+                        layout='responsive'
+                        width={300}
+                        height={450}
                         className='@apply border-[4px] border-solid border-[#ffffff]'
                     />
                 </div>

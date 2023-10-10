@@ -1,6 +1,25 @@
+"use client"
+
+import { useState } from 'react';
 import { BsFillTelephoneOutboundFill } from 'react-icons/bs';
 import { BsDownload } from 'react-icons/bs';
+import Modal from './ModelOverview';
 const Location = () => {
+    const [showVideo, setShowVideo] = useState(false);
+
+    const handleImageClick = () => {
+        setShowVideo(true);
+    };
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const handleDownloadButtonClick = () => {
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+    };
     return (
         <div className="bg-[#113354]">
 
@@ -18,14 +37,25 @@ const Location = () => {
                     </div>
 
                     <div>
-                        <button className='font-bold flex gap-2 items-center bg-[#11395b] text-[16x] hover:bg-[#1e5896] px-3 py-2 text-white border border-solid border-white float-left mr-3'>
-                            <BsFillTelephoneOutboundFill />
-                            <span>Gọi hotline</span>
-                        </button>
-                        <button className='font-bold flex gap-2 items-center bg-[#f00000] text-[16px] hover:bg-[#11395b] px-3 py-2 text-white border border-solid border-white'>
-                            <BsDownload />
-                            <span>TẢI BẢNG GIÁ</span>
-                        </button>
+                        <div>
+                            <button className='font-bold flex gap-2 items-center bg-[#11395b] text-[16x] hover:bg-[#1e5896] px-3 py-2 text-white border border-solid border-white float-left mr-3'>
+                                <BsFillTelephoneOutboundFill />
+                                <span>Gọi hotline</span>
+                            </button>
+                        </div>
+
+                        <div>
+                            <button onClick={handleDownloadButtonClick} className='font-bold flex gap-2 items-center bg-[#f00000] text-[16px] hover:bg-[#11395b] px-3 py-2 text-white border border-solid border-white'>
+                                <BsDownload />
+                                <span>TẢI BẢNG GIÁ</span>
+                            </button>
+
+                            <Modal
+                                isOpen={isModalOpen}
+                                onClose={closeModal}
+                                message="Đây là thông báo"
+                            />
+                        </div>
                     </div>
                 </div>
                 <div>
